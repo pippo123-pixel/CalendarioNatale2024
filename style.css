@@ -11,6 +11,13 @@ body {
     background-color: #ff3333;
 }
 
+#box-tabella {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
 td {
     color: white;
     border: 1px solid black;
@@ -33,9 +40,7 @@ td {
 }
 
 #santa-claus-img {
-    position: fixed;
-    right: 0px;
-    bottom: 0px;
+    float: right;
 }
 
 #cella25 {
@@ -44,7 +49,72 @@ td {
     background-repeat: no-repeat;
 }
 
+#box-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @font-face {
     font-family: "Last Christmas";
     src: url(last_christmas/LastChristmas_PERSONAL_USE_ONLY.otf);
+}
+
+/* VISUALIZZAZIONE DA MOBILE ORIZZONTALE */
+@media (max-width: 980px) {
+    #santa-claus-img {
+        float: none;
+        width: auto;
+        height: 150px;
+    }
+
+    #box-tabella {
+        float: none;
+    }
+
+    .cella {
+        width: 50px;
+        height: 40px;
+        background-color: #0e813c;
+    }
+
+    .intestazione {
+        width: auto;
+        height: 50px;
+        font-family: "Last Christmas";
+        font-size: 1em;
+        padding-left: 2px;
+    }
+}
+
+/* VISUALIZZAZIONE DA MOBILE VERTICALE */
+@media (max-width: 480px) {
+    body{
+        display: block;
+    }
+
+    #box-tabella {
+        float: none;
+    }
+
+    #santa-claus-img {
+        margin-top: 10px;
+        float: none;
+        width: 280px;
+        height: auto;
+    }
+
+    .cella {
+        width: 60px;
+        height: 50px;
+        background-color: #0e813c;
+    }
+
+    .intestazione {
+        width: auto;
+        height: 50px;
+        font-family: "Last Christmas";
+        font-size: 0.8em;
+        padding-left: 2px;
+    }
 }

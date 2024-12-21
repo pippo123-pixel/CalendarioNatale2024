@@ -1,6 +1,7 @@
 let giorniSettimana = new Array("Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato");
 let NUM_SETT = 5;
 let GIORNI_SETT = giorniSettimana.length;
+let intervalID = setInterval(segnaX, 1000);
 
 function creaTabella(){
     let stringaTabella = "<table>";
@@ -36,11 +37,27 @@ function creaTabella(){
 }
 
 function segnaX(){
-    let data = new Date();
-    let giornoOggi = data.getDate();
+    let date = new Date();
+    let today = date.getDate();
 
-    for(let i=0; i < giornoOggi-1; i++){
+    for(let i=0; i < today; i++){
         document.getElementById("cella" + (i+1)).style.backgroundImage = "url('img/x.png')";
         document.getElementById("cella" + (i+1)).style.backgroundSize = "cover";
     }
+
+    let dateXmas = new Date("2024/12/25 00:00:00");
+    let millisecXmas = dateXmas.getTime();
+    let millisecsNow = date.getTime();
+
+    let difference = millisecXmas - millisecsNow;
+    
+//Calcolo tempo mancante a natale
+    let secs = difference / 1000;
+    let hrs = Math.floor(secs / 3600); 
+    let min = Math.floor((secs % 3600) / 60);
+    let sec = Math.floor(secs % 60);
+
+    // document.getElementById("countdown").innerHTML = hrs + ":" + min + ":" + sec;
+    // console.log("Ore: " + hrs + " Minuti: " + min + " Secondi: " + sec);
+
 }
