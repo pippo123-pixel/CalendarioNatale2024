@@ -6,12 +6,15 @@
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
         <title>❄️ Calendario Natale 🎅</title>
+        <link rel="icon" type="image/vnd.icon" href="img/icona_natale.webp">
     </head>
-    <body onload="creaTabella()">
-        <div id="countdown"></div>
-        <div id="box-tabella"></div>
-        <div id="box-img">
-            <img src="img/santa_claus.jpeg" alt="Santa Claus" id="santa-claus-img" width="280px" height="auto">
+    <body onload="creaTabella()" onclick="playAudio()">
+        <div id="countdown" class="flex"></div>
+        <div id="box" class="flex">    
+            <div id="box-tabella" class="flex"></div>
+            <div id="box-img" class="flex">
+                <img src="img/santa_claus.jpeg" alt="Santa Claus" id="santa-claus-img" width="280px" height="auto">
+            </div>
         </div>
     </body>
 </html>

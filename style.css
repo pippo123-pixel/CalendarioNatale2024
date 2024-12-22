@@ -4,19 +4,36 @@ html, body {
     margin: 0;
 }
 
-body {
+.flex {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: #ff3333;
 }
 
-#box-tabella {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: left;
+#countdown {
+    height: 10%;
+    margin: 0;
+    font-family: "Frosty";
+    font-size: 2em;
+    font-weight: bold;
+    color: #F0F0F0;
 }
+
+#box {
+    height: 90%;
+    margin: 0;
+}
+
+/* #box-tabella {} */
+/* #box-img {} */
+/* #santa-claus-img {} */
 
 td {
     color: white;
@@ -39,37 +56,27 @@ td {
     background-color: #0e813c;
 }
 
-#santa-claus-img {
-    float: right;
-}
-
 #cella25 {
     background-image: url("img/sfondo25.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-#box-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@font-face {
+    font-family: "Last Christmas";
+    src: url(fonts/LastChristmas.otf);
 }
 
 @font-face {
-    font-family: "Last Christmas";
-    src: url(last_christmas/LastChristmas_PERSONAL_USE_ONLY.otf);
+    font-family: "Frosty";
+    src: url(fonts/FROSTY.TTF);
 }
 
 /* VISUALIZZAZIONE DA MOBILE ORIZZONTALE */
 @media (max-width: 980px) {
     #santa-claus-img {
-        float: none;
         width: auto;
         height: 150px;
-    }
-
-    #box-tabella {
-        float: none;
     }
 
     .cella {
@@ -89,18 +96,14 @@ td {
 
 /* VISUALIZZAZIONE DA MOBILE VERTICALE */
 @media (max-width: 480px) {
-    body{
+    #box {
         display: block;
-    }
-
-    #box-tabella {
-        float: none;
     }
 
     #santa-claus-img {
         margin-top: 10px;
         float: none;
-        width: 280px;
+        width: 250px;
         height: auto;
     }
 
